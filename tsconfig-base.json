@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    // [功能开关 Functional Switch]
+    "strict": true,
+    // 使 ES6 脚本可以更方便地引用 CommonJS 模块
+    // Make ES6 scripts easier to reference CommonJS modules.
+    "esModuleInterop": true,
+    // 允许用 import X from 'xxx' 代替 import * as X from 'xxx'
+    // Allow using 'import X from 'xxx'' instead of 'import * as X from 'xxx''
+    "allowSyntheticDefaultImports": true,
+    // 对象中未明确定义的 key，类型标记为”可能为 undefined“，而不是假设一定有值
+    // The keys that are not explicitly defined in an object are marked as 'possibly undefined'
+    // instead of assuming they have a value.
+    "noUncheckedIndexedAccess": true,
+    // 允许使用装饰器 Allow the use of decorators.
+    "experimentalDecorators": true,
+
+    // [解析、输出格式 Parsing And Output Formats]
+    // 假设代码运行环境是最新的
+    // Assume that the code execution environment is up-to-date.
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    // TypeScript 本身不转义 JSX，交给其他工具
+    // TypeScript itself does not transpile JSX, it is handed off to other tools.
+    "jsx": "preserve",
+
+    // [路径配置 Path Configuration]
+    "baseUrl": "../../../src",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["../../../src/"]
+}

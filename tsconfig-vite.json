@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig-base",
+  "compilerOptions": {
+    // Vite 建议开启此选项：代码涉及到 Vite 不支持的”隔离相关特性“时，显示警告。
+    // Recommend from Vite: display a warning when the code involves 'isolation-related features' that are not supported by Vite.
+    "isolatedModules": true,
+
+    // 开启 isolatedModules 的情况下，一些库（如 Vue）会报错，通过此选项缓解此问题。
+    // When 'isolatedModules' is enabled, some libraries (such as Vue) may report errors. This option can alleviate this issue.
+    "skipLibCheck": true,
+
+    // 补充类型定义，如 svg 等导入资源的类型；假定项目包含了以下依赖：vite、vite-plugin-svgr
+    // Supplement type definitions for imported resources such as SVG; assuming the project includes the following dependencies: vite, vite-plugin-svgr.
+    "types": ["vite-plugin-svgr/client", "vite/client"]
+  }
+}

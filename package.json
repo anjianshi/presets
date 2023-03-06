@@ -1,0 +1,36 @@
+{
+  "name": "@anjianshi/presets",
+  "version": "1.0.0",
+  "description": "Reusable presets: ESLint, Prettier, tsconfig...",
+  "homepage": "https://github.com/anjianshi/presets",
+  "bugs": {
+    "url": "https://github.com/anjianshi/presets/issues",
+    "email": "anjianshi@gmail.com"
+  },
+  "license": "MIT",
+  "author": "anjianshi <anjianshi@gmail.com>",
+  "repository": "github:anjianshi/presets",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-ts-react-hooks": "^0.1.1"
+  },
+  "peerDependencies": {
+    "eslint": "^8.33.0",
+    "typescript": "^4.9.5"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  }
+}
