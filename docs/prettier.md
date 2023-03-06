@@ -8,7 +8,7 @@
    ```
 2. 项目根目录建立 `.prettierrc.js` 文件：
    ```js
-   module.exports = '@gnlab/presets/prettierrc'
+   module.exports = '@anjianshi/presets/prettierrc'
    ```
 
 ## 配置 VSCode

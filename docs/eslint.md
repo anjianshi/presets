@@ -18,12 +18,12 @@
 
 ## 配置文件列表
 
-| 文件                             | 内容                 |
-| -------------------------------- | -------------------- |
-| @gnlab/presets/eslint-base       | 基础 JavaScript 规则 |
-| @gnlab/presets/eslint-typescript | TypeScript 规则      |
-| @gnlab/presets/eslint-react      | React App 规则       |
-| @gnlab/presets/eslint-node       | Node.js 环境下的规则 |
+| 文件                                 | 内容                 |
+| ------------------------------------ | -------------------- |
+| @anjianshi/presets/eslint-base       | 基础 JavaScript 规则 |
+| @anjianshi/presets/eslint-typescript | TypeScript 规则      |
+| @anjianshi/presets/eslint-react      | React App 规则       |
+| @anjianshi/presets/eslint-node       | Node.js 环境下的规则 |
 
 每个文件都只包含自己领域的内容，对于复合场景，需要组合使用（必须先引用 `base` 才能引用其他文件）。  
 例如开发基于 TypeScript 的 React 应用，需引用：`base`、`typescript` 和 `react`。
@@ -35,7 +35,7 @@
 ### 安装
 
 ```sh
-yarn add --dev eslint @gnlab/presets
+yarn add --dev eslint @anjianshi/presets
 ```
 
 ### 配置 ESLint
@@ -46,7 +46,7 @@ yarn add --dev eslint @gnlab/presets
 ```js
 module.exports = {
   extends: [
-    './node_modules/@gnlab/presets/eslint-base',
+    './node_modules/@anjianshi/presets/eslint-base',
     ...
   ]
 }
@@ -67,8 +67,8 @@ module.exports = {
     ```js
     module.exports = {
       extends: [
-        './node_modules/@gnlab/presets/eslint-base',
-        './node_modules/@gnlab/presets/eslint-typescript',
+        './node_modules/@anjianshi/presets/eslint-base',
+        './node_modules/@anjianshi/presets/eslint-typescript',
       ],
       parserOptions: {
         project: './src/tsconfig.json',

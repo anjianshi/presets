@@ -66,8 +66,8 @@ module.exports = {
     ```js
     module.exports = {
       extends: [
-        './node_modules/@gnlab/presets/eslint-base',
-        './node_modules/@gnlab/presets/eslint-typescript',
+        './node_modules/@anjianshi/presets/eslint-base',
+        './node_modules/@anjianshi/presets/eslint-typescript',
       ],
       parserOptions: {
         project: './src/tsconfig.json',
