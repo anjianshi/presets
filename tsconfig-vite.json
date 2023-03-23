@@ -1,6 +1,10 @@
 {
   "extends": "./tsconfig-base",
   "compilerOptions": {
+    // 启用 Vite 的文件解析特性（支持在开启了 Module 的项目里不带扩展名引入文件）
+    // Use Vite's module resolution feature：import file without extension name in project that enabled ES6 module.
+    "moduleResolution": "bundler",
+
     // Vite 建议开启此选项：代码涉及到 Vite 不支持的”隔离相关特性“时，显示警告。
     // Recommend from Vite: display a warning when the code involves 'isolation-related features' that are not supported by Vite.
     "isolatedModules": true,
