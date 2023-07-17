@@ -23,9 +23,12 @@ Conflicts with other rules.
 */
 
 const rules = {
-  // TypeScript 会自行检查这一项
-  // Checked by TypeScript itself.
+  // TypeScript 会自行检查以下项目，禁用以避免冲突并提升性能.
+  // Checked by TypeScript itself, disable to avoid conflicts and improve performance.
+  // <https://typescript-eslint.io/linting/troubleshooting/performance-troubleshooting/#eslint-plugin-import>
   'import/default': 'off',
+  'import/named': 'off',
+  'import/namespace': 'off',
 
   // 交给 @typescript-eslint/switch-exhaustiveness-check 规则来检查 switch
   // Use the '@typescript-eslint/switch-exhaustiveness-check' rule to check switch cases.

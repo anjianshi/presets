@@ -3,6 +3,9 @@ module.exports = {
     node: true,
     es6: true,
   },
+  parserOptions: {
+    ecmaVersion: 'latest',
+  },
   rules: {
     'global-require': 'off',
     'no-console': 'off',
