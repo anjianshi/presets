@@ -5,5 +5,8 @@ module.exports = {
   printWidth: 100,
   semi: false,
   singleQuote: true,
-  arrowParens: 'avoid',
-}
+  arrowParens: "avoid",
+
+  // 来自 prettier-not-stubborn
+  jsxElementParens: "avoid",
+};
