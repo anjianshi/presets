@@ -106,7 +106,7 @@ const rules = {
   '@typescript-eslint/return-await': 'error',
 
   // Import
-  'import/no-duplicates': ['error', { 'prefer-inline': true }],
+  'import/no-duplicates': ['error', { 'prefer-inline': true, considerQueryString: true }],
 }
 
 module.exports = {

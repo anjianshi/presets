@@ -2,6 +2,7 @@ module.exports = {
   root: true,
   plugins: ['import'],
   extends: ['eslint:recommended', 'plugin:import/recommended', 'prettier'],
+  ignorePatterns: [],
   rules: {
     // Possible Problems
     'array-callback-return': 'error',
@@ -96,6 +97,8 @@ module.exports = {
     // Node.js ES6 Module 里需要把 noUselessIndex 设为 false
     // 'noUselessIndex' needs to be set to false in Node.js ES6 Modules.
     'import/no-useless-path-segments': ['error', { noUselessIndex: false }],
+    'import/no-named-as-default-member': 'off',
+    'import/no-duplicates': ['error', { considerQueryString: true }],
     'import/order': [
       'error',
       {
