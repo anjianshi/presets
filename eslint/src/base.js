@@ -30,10 +30,7 @@ module.exports = {
     curly: ['error', 'multi-line'],
     'default-case': 'error',
     'default-case-last': 'error',
-    // 此规则有缺陷：后面有其他可选参数的情况下，有默认值的参数应可以不在最后
-    // This rule has a flaw: if there are other optional parameters following it,
-    // the parameter with a default value should not necessarily be placed at the end.
-    'default-param-last': 'off',
+    'default-param-last': 'off', // 此规则有缺陷：后面有其他可选参数的情况下，有默认值的参数应可以不在最后
     eqeqeq: 'error',
     'grouped-accessor-pairs': 'error',
     'guard-for-in': 'error',
@@ -84,19 +81,15 @@ module.exports = {
     'prefer-promise-reject-errors': 'error',
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
-    // 自行选择要不要用 template string
-    // Choose whether or not to use template strings at your own discretion
-    'prefer-template': 'off',
+    'prefer-template': 'off', // 自行选择要不要用 template string
     'quote-props': ['error', 'as-needed'],
     radix: 'error',
     'spaced-comment': ['error', 'always'],
     'symbol-description': 'error',
     yoda: 'error',
 
-    // import
-    // Node.js ES6 Module 里需要把 noUselessIndex 设为 false
-    // 'noUselessIndex' needs to be set to false in Node.js ES6 Modules.
-    'import/no-useless-path-segments': ['error', { noUselessIndex: false }],
+    // Import
+    'import/no-useless-path-segments': ['error', { noUselessIndex: false }], // Node.js ES6 Module 里需要把 noUselessIndex 设为 false
     'import/no-named-as-default-member': 'off',
     'import/no-duplicates': ['error', { considerQueryString: true }],
     'import/order': [

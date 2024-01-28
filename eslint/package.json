@@ -1,0 +1,20 @@
+{
+  "name": "@anjianshi/presets-eslint-build",
+  "version": "1.0.3",
+  "description": "公共 ESLint 配置",
+  "homepage": "https://github.com/anjianshi/presets/eslint/",
+  "bugs": {
+    "url": "https://github.com/anjianshi/presets/issues",
+    "email": "anjianshi@gmail.com"
+  },
+  "license": "MIT",
+  "author": "anjianshi <anjianshi@gmail.com>",
+  "repository": "github:anjianshi/presets",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "scripts": {
+    "publish-packages": "node ./publish-packages.js"
+  }
+}

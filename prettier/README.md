@@ -3,10 +3,13 @@
 ## 如何使用
 
 1. 安装此类库
+
    ```sh
-   yarn add --dev @anjianshi/presets
+   npm install --dev @anjianshi/presets-prettier
    ```
-2. 项目根目录建立 `.prettierrc.js` 文件：
+
+2. 在 `package.json` 中添加 `"prettier": "@anjianshi/presets-prettier/prettierrc"`
+   或在项目根目录建立 `.prettierrc.js` 文件：
    ```js
    module.exports = '@anjianshi/presets/prettierrc'
    ```

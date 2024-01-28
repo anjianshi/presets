@@ -1,0 +1,20 @@
+{
+  "name": "@anjianshi/presets-prettier",
+  "version": "1.0.0",
+  "description": "公共 Prettier Config",
+  "homepage": "https://github.com/anjianshi/presets/prttier",
+  "bugs": {
+    "url": "https://github.com/anjianshi/presets/issues",
+    "email": "anjianshi@gmail.com"
+  },
+  "license": "MIT",
+  "author": "anjianshi <anjianshi@gmail.com>",
+  "repository": "github:anjianshi/presets",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "dependencies": {
+    "prettier-not-stubborn": "^3.3.0-dev"
+  }
+}

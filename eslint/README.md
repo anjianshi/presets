@@ -1,4 +1,4 @@
-# 公共 ESLint Configs
+# 公共 ESLint 配置
 
 ## 设计思路
 
@@ -16,17 +16,25 @@
 
 ---
 
-## 配置文件列表
+## 包列表
 
-| 文件                                 | 内容                 |
-| ------------------------------------ | -------------------- |
-| @anjianshi/presets/eslint-base       | 基础 JavaScript 规则 |
-| @anjianshi/presets/eslint-typescript | TypeScript 规则      |
-| @anjianshi/presets/eslint-react      | React App 规则       |
-| @anjianshi/presets/eslint-node       | Node.js 环境下的规则 |
+| 文件                                 | 内容                    |
+| ------------------------------------ | ----------------------- |
+| @anjianshi/presets-eslint-base       | 基础 JavaScript 规则    |
+| @anjianshi/presets-eslint-typescript | TypeScript 规则         |
+| @anjianshi/presets-eslint-react      | React + TypeScript 规则 |
+| @anjianshi/presets-eslint-node       | Node.js 环境下的规则    |
 
-每个文件都只包含自己领域的内容，对于复合场景，需要组合使用（必须先引用 `base` 才能引用其他文件）。  
-例如开发基于 TypeScript 的 React 应用，需引用：`base`、`typescript` 和 `react`。
+除 `base` 包外，每个包里有两个文件：
+
+- `index.js`：包含 base 规则和包自身规则
+- `exclusive.js`：仅包含包自身规则
+
+`base` 包只有 `index.js`。
+
+只使用一个包时，直接使用包的 `index.js` 即可。
+如果要组合使用多个包，例如开发使用 TypeScript 语言的 Node.js 应用，要引用：`typescript` 和 `node`，
+则第一个包可以引用 `index.js`，后面的包应引用 `exclusive.js`，以免重复引入 base 规则，覆盖掉前面的包对 base 规则的修改。
 
 ---
 
@@ -35,8 +43,10 @@
 ### 安装
 
 ```sh
-yarn add --dev eslint @anjianshi/presets
+npm install --dev @anjianshi/presets-eslint-xxx
 ```
+
+此包已包含 ESLint 依赖，无需再手动添加。
 
 ### 配置 ESLint
 
@@ -46,7 +56,7 @@ yarn add --dev eslint @anjianshi/presets
 ```js
 module.exports = {
   extends: [
-    './node_modules/@anjianshi/presets/eslint-base',
+    './node_modules/@anjianshi/eslint-xxx',
     ...
   ]
 }
@@ -54,11 +64,7 @@ module.exports = {
 
 ### 配置 TypeScript
 
-1.  安装 TypeScript：
-
-    ```sh
-    yarn add --dev typescript
-    ```
+1.  安装 TypeScript
 
 2.  `@typescript-eslint/parser` 要求指定 `tsconfig.json` 的位置（以项目根目录为基准）。  
     此预设文件已假定 `tsconfig.json` 处于项目根目录并配置好了。  
@@ -66,10 +72,7 @@ module.exports = {
 
     ```js
     module.exports = {
-      extends: [
-        './node_modules/@anjianshi/presets/eslint-base',
-        './node_modules/@anjianshi/presets/eslint-typescript',
-      ],
+      extends: ['./node_modules/@anjianshi/eslint-typescript'],
       parserOptions: {
         project: './src/tsconfig.json',
       },
@@ -144,3 +147,8 @@ library/      // /Users/me/library/
 
 看 ESLint 及各插件的 ChangeLog，来补充、移除、调整规则定义。
 (规则文件里只定义和默认值不同的规则，例如默认不开启，也没准备开启的规则就不写下来)
+
+### 如何发布
+
+1. 更新 `eslint/package.json` 里的 `version`
+2. 在 `eslint` 目录下执行 `npm pubish-packages`
