@@ -1,13 +1,9 @@
 {
   "extends": "./tsconfig-base",
   "compilerOptions": {
-    // [解析、输出格式]
-    "target": "ESNext",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "declaration": true,
-
-    // [路径配置]
     "outDir": "../../../dist"
   }
 }
