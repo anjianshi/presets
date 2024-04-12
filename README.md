@@ -1,5 +1,7 @@
 # 配置文件合集
 
+已迁移到 `js-packages`：<https://github.com/anjianshi/js-packages>。
+
 目前包含：
 
 - ESLint 配置

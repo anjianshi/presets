@@ -6,7 +6,6 @@ module.exports = {
   rules: {
     // Possible Problems
     'array-callback-return': 'error',
-    'no-await-in-loop': 'warn',
     'no-constant-binary-expression': 'warn',
     'no-constructor-return': 'error',
     'no-duplicate-imports': 'off', // Replaced by import/no-duplicates
